@@ -1,0 +1,11 @@
+// Today i was faced with an interesting challenge regarding arrays and user input ..
+// Through out my programs i have built a habit for the user to simply enter the values
+// From the terminal and not only that .. to also enter them on the same line
+// Each value separated by a space from the previous one .. for the user convenience (｡◕‿‿◕｡)
+// Moving forward will i be able to keep my simple ans user-friendly style ..
+// Or will i just prompt the user to enter the size of an array and keep looping
+// On new lines to get all the values (in an ugly fashion) or will i crumble all together
+// And act like the user doesn't exist only to hide my failure and weaknesses (︶︹︶)
+
+// I guess we will find out ¯\(°_o)/¯ ...
+// Or you have already found out if you are reading this note last (͡ ° ͜ʖ ͡ °)
