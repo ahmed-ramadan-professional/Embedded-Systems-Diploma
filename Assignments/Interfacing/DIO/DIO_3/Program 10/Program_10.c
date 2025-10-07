@@ -2,7 +2,7 @@
 #include <util/delay.h>
 
 #include <Library/BIT_MATH/BIT_MATH.h>
-#include <Library/BUTTON_PRESS/BUTTON_PRESS.h>
+#include "includes/BUTTON_PRESS/BUTTON_PRESS.h"
 
 #define BLINK_CYCLE 300
 #define BLINKING_PORT PORTB

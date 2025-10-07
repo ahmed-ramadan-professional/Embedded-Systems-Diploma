@@ -4,7 +4,7 @@
 #include <Library/BIT_MATH/BIT_MATH.h>
 
 // This logic was taken out, packaged and encapsulated into its own include file and c file
-// check out COTS/BUTTON_PRESS/BUTTON_PRESS.h and COTS/BUTTON_PRESS/BUTTON_PRESS.c
+// check out Program 10/includes/BUTTON_PRESS/BUTTON_PRESS.h and Program 10/includes/BUTTON_PRESS/BUTTON_PRESS.c
 
 #define CONFIRMATION_TIME_DELAY 200
 

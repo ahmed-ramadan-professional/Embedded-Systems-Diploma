@@ -12,7 +12,7 @@
 #define CONTROL_PORT_DIR DDRC
 
 // This logic was taken out, packaged and encapsulated into its own include file and c file
-// check out COTS/DOUBLE_7_SEGMENTS/DOUBLE_7_SEGMENTS.h and COTS/DOUBLE_7_SEGMENTS/DOUBLE_7_SEGMENTS.c
+// check out Program 9/includes/DOUBLE_7_SEGMENTS/DOUBLE_7_SEGMENTS.h and Program 9/includes/DOUBLE_7_SEGMENTS/DOUBLE_7_SEGMENTS.c
 
 const digits[10] = {0b01111110, 0b00001100, 0b10110110, 0b10011110, 0b11001100,
                     0b11011010, 0b11111000, 0b00001110, 0b11111110, 0b11011110};

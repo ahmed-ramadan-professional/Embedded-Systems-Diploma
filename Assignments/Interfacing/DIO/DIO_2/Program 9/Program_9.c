@@ -2,7 +2,7 @@
 #include <util/delay.h>
 
 #include <Library/BIT_MATH/BIT_MATH.h>
-#include <Library/DOUBLE_7_SEGMENT/DOUBLE_7_SEGMENTS.h>
+#include "includes/DOUBLE_7_SEGMENT/DOUBLE_7_SEGMENTS.h"
 
 #define BLINK_CYCLE 300
 
