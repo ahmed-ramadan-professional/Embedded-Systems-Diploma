@@ -35,6 +35,7 @@ void port_blink(volatile uint8_t *port) {
 void port_shift_right(volatile uint8_t *port) {
     uint8_t i;
     for (i = 0; i < (uint8_t)8; i++) {
+        // without the use of interrupts i had to exit in this ugly way, sorry :(
         if (is_button_pressed(&PIND, &DDRD, 5)) {
             exit();
             return;
