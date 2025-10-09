@@ -41,6 +41,7 @@ uint8_t DIO_u8GetPinValue(uint8_t Copy_u8Port, uint8_t Copy_u8Pin, uint8_t *Copy
 // ================================ Port Functions =====================================
 
 uint8_t DIO_u8SetPortValue(uint8_t Copy_u8Port, uint8_t Copy_u8Value);
+uint8_t DIO_u8SetPortValueHighOrLow(uint8_t Copy_u8Port, uint8_t Copy_u8Value);
 uint8_t DIO_u8TogglePortValue(uint8_t Copy_u8Port);
 uint8_t DIO_u8GetPortValue(uint8_t Copy_u8Port, uint8_t *Copy_pu8Value);
 

@@ -60,7 +60,7 @@ uint8_t DIO_u8GetPortDirection(uint8_t Copy_u8Port, uint8_t *Copy_pu8Direction) 
     if (!DIO_u8ValidateFuncArgs(DIO_VALID_PORT, Copy_u8Port)) return 0;
     if (!Copy_pu8Direction) return 0;
 
-    *Copy_pu8Direction = *DIO_pu8ArrPortDirections[Copy_u8Port];
+    *Copy_pu8Direction = *(DIO_pu8ArrPortDirections[Copy_u8Port]);
 
     return 1u;
 }
@@ -71,7 +71,7 @@ uint8_t DIO_u8GetPinDirection(uint8_t Copy_u8Port, uint8_t Copy_u8Pin, uint8_t *
     if (!DIO_u8ValidateFuncArgs(DIO_VALID_PIN, Copy_u8Pin)) return 0;
     if (!Copy_pu8Direction) return 0;
 
-    *Copy_pu8Direction = GET_BIT(*DIO_pu8ArrPortDirections[Copy_u8Port], Copy_u8Pin);
+    *Copy_pu8Direction = GET_BIT(*(DIO_pu8ArrPortDirections[Copy_u8Port]), Copy_u8Pin);
 
     return 1u;
 }
@@ -110,9 +110,17 @@ uint8_t DIO_u8GetPinValue(uint8_t Copy_u8Port, uint8_t Copy_u8Pin, uint8_t *Copy
 
 uint8_t DIO_u8SetPortValue(uint8_t Copy_u8Port, uint8_t Copy_u8Value) {
     if (!DIO_u8ValidateFuncArgs(DIO_VALID_PORT, Copy_u8Port)) return 0;
+
+    *(DIO_pu8ArrPortRegisters[Copy_u8Port]) = Copy_u8Value;
+
+    return 1u;
+}
+
+uint8_t DIO_u8SetPortValueHighOrLow(uint8_t Copy_u8Port, uint8_t Copy_u8Value) {
+    if (!DIO_u8ValidateFuncArgs(DIO_VALID_PORT, Copy_u8Port)) return 0;
     if (!DIO_u8ValidateFuncArgs(DIO_VALID_SIGNAL, Copy_u8Value)) return 0;
 
-    *DIO_pu8ArrPortRegisters[Copy_u8Port] = Copy_u8Value == DIO_u8SIGNAL_HIGH ? 0xFF : 0x00;
+    *(DIO_pu8ArrPortRegisters[Copy_u8Port]) = Copy_u8Value == DIO_u8SIGNAL_HIGH ? 0xFF : 0x00;
 
     return 1u;
 }
@@ -120,7 +128,7 @@ uint8_t DIO_u8SetPortValue(uint8_t Copy_u8Port, uint8_t Copy_u8Value) {
 uint8_t DIO_u8TogglePortValue(uint8_t Copy_u8Port) {
     if (!DIO_u8ValidateFuncArgs(DIO_VALID_PORT, Copy_u8Port)) return 0;
 
-    *DIO_pu8ArrPortRegisters[Copy_u8Port] = ~(*DIO_pu8ArrPortRegisters[Copy_u8Port]);
+    *(DIO_pu8ArrPortRegisters[Copy_u8Port]) = ~(*DIO_pu8ArrPortRegisters[Copy_u8Port]);
 
     return 1u;
 }
@@ -129,7 +137,7 @@ uint8_t DIO_u8GetPortValue(uint8_t Copy_u8Port, uint8_t *Copy_pu8Value) {
     if (!DIO_u8ValidateFuncArgs(DIO_VALID_PORT, Copy_u8Port)) return 0;
     if (!Copy_pu8Value) return 0;
 
-    *Copy_pu8Value = *DIO_pu8ArrInputRegisters[Copy_u8Port];
+    *Copy_pu8Value = *(DIO_pu8ArrInputRegisters[Copy_u8Port]);
 
     return 1u;
 }
