@@ -1,7 +1,8 @@
-#include <Library/BIT_MATH/BIT_MATH.h>
-#include <Library/STD_DEFINSINS/STD_DEFINSINS.h>
 #include <stdint.h>
 #include <util/delay.h>
+
+#include "../Library/BIT_MATH/BIT_MATH.h"
+#include "../Library/STD_DEFINSINS/STD_DEFINSINS.h"
 
 #include "../DIO/DIO_interface.h"
 

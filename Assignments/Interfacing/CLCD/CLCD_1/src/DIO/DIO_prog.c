@@ -1,6 +1,7 @@
-#include <Library/BIT_MATH/BIT_MATH.h>
-#include <Library/STD_DEFINSINS/STD_DEFINSINS.h>
 #include <stdint.h>
+
+#include "../Library/BIT_MATH/BIT_MATH.h"
+#include "../Library/STD_DEFINSINS/STD_DEFINSINS.h"
 
 #include "DIO_cfg.h"
 #include "DIO_interface.h"

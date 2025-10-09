@@ -3,8 +3,6 @@
 
 #include <stdint.h>
 
-void test(void);
-
 void CLCD_voidSendCmdByte(uint8_t Copy_u8Cmd);
 
 void CLCD_voidSendDataByte(uint8_t Copy_u8Data);
