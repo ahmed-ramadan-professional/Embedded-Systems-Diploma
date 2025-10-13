@@ -1,6 +1,7 @@
-#include <Library/BIT_MATH/BIT_MATH.h>
-#include <Library/STD_DEFINSINS/STD_DEFINSINS.h>
 #include <stdint.h>
+
+#include "../Library/BIT_MATH/BIT_MATH.h"
+#include "../Library/STD_DEFINSINS/STD_DEFINSINS.h"
 
 #include "DIO_cfg.h"
 #include "DIO_interface.h"
@@ -108,7 +109,7 @@ uint8_t DIO_u8GetPinValue(uint8_t Copy_u8Port, uint8_t Copy_u8Pin, uint8_t *Copy
 
 // ================================ Port Functions ====================================
 
-uint8_t DIO_u8SetPortValue(uint8_t Copy_u8Port, uint8_t Copy_u8Value) {
+uint8_t DIO_u8SetPortCustomValue(uint8_t Copy_u8Port, uint8_t Copy_u8Value) {
     if (!DIO_u8ValidateFuncArgs(DIO_VALID_PORT, Copy_u8Port)) return 0;
 
     *(DIO_pu8ArrPortRegisters[Copy_u8Port]) = Copy_u8Value;
@@ -116,7 +117,7 @@ uint8_t DIO_u8SetPortValue(uint8_t Copy_u8Port, uint8_t Copy_u8Value) {
     return 1u;
 }
 
-uint8_t DIO_u8SetPortValueHighOrLow(uint8_t Copy_u8Port, uint8_t Copy_u8Value) {
+uint8_t DIO_u8SetPortValue(uint8_t Copy_u8Port, uint8_t Copy_u8Value) {
     if (!DIO_u8ValidateFuncArgs(DIO_VALID_PORT, Copy_u8Port)) return 0;
     if (!DIO_u8ValidateFuncArgs(DIO_VALID_SIGNAL, Copy_u8Value)) return 0;
 
