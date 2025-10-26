@@ -1,0 +1,16 @@
+#ifndef EXTI_CFG_H
+#define EXTI_CFG_H
+
+#include "EXTI_interface.h"
+
+#define EXTI_u8INT0_SENSE_CTRL         EXTI_u8FALLING_EDGE
+#define EXTI_u8INT1_SENSE_CTRL         EXTI_u8FALLING_EDGE
+#define EXTI_u8INT2_SENSE_CTRL         EXTI_u8FALLING_EDGE
+
+
+#define EXTI_u8INT0_INIT_STATE         EXTI_u8ENABLED
+#define EXTI_u8INT1_INIT_STATE         EXTI_u8ENABLED
+#define EXTI_u8INT2_INIT_STATE         EXTI_u8ENABLED
+
+
+#endif
